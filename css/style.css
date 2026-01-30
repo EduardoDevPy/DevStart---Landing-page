@@ -1,0 +1,222 @@
+body {
+    font-family: var(--font-primary);
+    color: var(--color-gray-900);
+    background-color: var(--color-white);
+    line-height: 1.6;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+.header {
+    background-color: var(--color-white);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-bottom: 1px solid var(--color-gray-100);
+}
+
+.header__nav {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.header__menu {
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.header__menu a {
+    font-weight: 500;
+    color: var(--color-gray-600);
+}
+
+.header__menu a:hover {
+    color: var(--color-primary);
+}
+
+.hero {
+    padding: var(--spacing-x1) var(--spacing-lg);
+    text-align: center;
+    background-color: var(--color-gray-100);
+}
+
+.hero__title {
+    font-size: 2.5rem;
+    max-width: 700px;
+    margin: 0 auto var(--spacing-md);
+}
+
+.hero__subtitle {
+    font-size: 1.25rem;
+    color: var(--color-gray-600);
+    max-width: 600px;
+    margin: 0 auto var(--spacing-lg);
+}
+
+.button--primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.button--primary:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.benefits {
+    padding: var(--spacing-x1) var(--spacing-lg);
+}
+
+.benefits__list {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+}
+
+.benefit-card {
+    background-color: var(--color-white);
+    padding: var(--spacing-lg);
+    border-radius: var(--spacing-md);
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1)
+}
+
+.benefit-card h3 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-gray-600);
+}
+
+.benefit-card p {
+    color: var(--color-gray-600);
+}
+
+/* Depoimentos */
+
+.testimonials {
+    padding: var(--spacing-x1) var(--spacing-lg);
+    background-color: var(--color-gray-100);
+}
+
+.testimonials__list {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+}
+
+.testimonial-card {
+    background-color: var(--color-white);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-card p {
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-gray-600);
+}
+
+.testimonial-card span {
+    font-weight: 600;
+    color: var(--color-gray-900);
+}
+
+/* Planos */
+
+.pricing {
+    padding: var(--spacing-x1) var(--spacing-lg);
+}
+
+.pricing__list {
+    max-width: 1000px;
+    margin: o auto;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+}
+
+.pricing-card {
+    background-color: var(--color-white);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.pricing-card h3 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.price {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary);
+}
+
+.pricing-card ul {
+    margin-bottom: var(--spacing-md);
+}
+
+.pricing-card li {
+    margin-bottom: var(--spacing-sm);
+}
+
+.pricing-card--featured {
+    border: 2px solid var(--color-primary);
+}
+
+/* Fechamento */
+
+.cta {
+    padding: var(--spacing-x1) var(--spacing-lg);
+    background-color: var(--color-primary);
+    text-align: center;
+    color: var(--color-white);
+}
+
+.cta h2 {
+    margin-bottom: var(--spacing-md);
+}
+
+
+@media (min-width: 768px) {
+    .benefit__list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero__title {
+        font-size: 3rem;
+    }
+
+    .testimonials__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pricing__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
