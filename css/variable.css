@@ -2,8 +2,9 @@
 /* Paleta principal */    
 --color-primary-dark: #03121F;
 --color-secundary: #01121F;
---color-accent: #22c55e;
 --color-dark: black;
+--color-accent: #8b5cf6;
+--color-details: #a6a6a6;
 
 /* Neutros*/   
 --color-text: #ebfcff;

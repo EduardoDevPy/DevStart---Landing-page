@@ -5,6 +5,10 @@ body {
     line-height: 1.6;
 }
 
+span {
+    color: var(--color-accent);
+}
+
 .section-title {
     text-align: center;
     font-size: 2rem;
@@ -38,7 +42,7 @@ body {
 .header__logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--color-white);
+    color: var(--color-text);
 }
 
 .header__menu {
@@ -48,13 +52,13 @@ body {
 
 .header__menu a {
     font-weight: 500;
-    color: var(--color-white);
+    color: var(--color-text);
     transition: 0.3s;
     
 }
 
 .header__menu a:hover {
-    text-decoration: underline;
+    color: var(--color-accent);
     
 }
 
@@ -87,8 +91,9 @@ body {
     padding: 0.75rem 1.5rem;
     border-radius: var(--radius-md);
     font-weight: 600;
-    background-color: var(--color-dark);
+    background-color: var(--color-accent);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: background 0.3 ease;
 }
 
 
@@ -98,6 +103,7 @@ body {
 
 .button--primary:hover {
     transform: translateY(-5px);
+    background: var(--color-details)
 }
 
 .benefits {
@@ -168,11 +174,15 @@ body {
     gap: var(--spacing-md);
 }
 
+.testimonial-card:hover {
+ border: 1px solid var(--color-accent);
+}
+
 .testimonial-card__avatar {
     width: 92px;
     height: 92px;
     border-radius: 50%;
-    border: 3px solid var(--color-white);
+    border: 3px solid var(--color-accent);
 }
 
 .testimonial-card p {
@@ -182,7 +192,6 @@ body {
 
 .testimonial-card span {
     font-weight: 600;
-    color: var(--color-text);
 }
 
 /* Planos */
@@ -206,10 +215,12 @@ body {
     border-radius: var(--radius-md);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
 
 .pricing-card:hover {
     transform: translateY(-5px);
+    border: 1px solid var(--color-accent);
 }
 
 .pricing-card h3 {
@@ -237,7 +248,12 @@ body {
     padding: 0.75rem 1.5rem;
     border-radius: var(--radius-md);
     font-weight: 600;
-    background-color: var(--color-primary-dark);
+    background-color: var(--color-accent);
+    transition: background 0.3s ease;
+}
+
+.button__plan:hover {
+    background: var(--color-details);
 }
 
 .payment-info {
@@ -279,6 +295,91 @@ body {
     align-items: center;
     font-size: 0.8rem;
 }
+
+/* Comunidade */
+
+.community {
+    padding: 6rem 1.5rem;
+    background: linear-gradient(
+    360deg,
+    var(--color-dark),
+    var(--color-secundary)
+    );
+    color: var(--color-text);
+}
+
+.community__container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.community__title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-lg);
+}
+
+.community__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.community__card {
+    background: var(--color-dark);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+
+    padding: var(--spacing-lg);
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.community__card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-accent);
+}
+
+.community__icon {
+    font-size: 1.4rem;
+}
+
+.community__card h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.community__card p {
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+.community__button {
+    margin-top: auto;
+
+    display: inline-flex;
+    align-items: center;
+
+    background: var(--color-accent);
+
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+
+    font-size: var(--spacing-md);
+    text-decoration: none;
+
+    transition: background 0.3s ease;
+}
+
+.community__button:hover {
+    background: var(--color-details);
+}
+
 
 /* Fechamento */
 
