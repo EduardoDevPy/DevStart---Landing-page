@@ -1,18 +1,24 @@
 :root {
---color-primary: #4f46e5;
---color-primary-dark: #4338ca;
---color-gray-900: #111827;
---color-gray-600: #4b5563;
---color-gray-100: #f3f4f6;
---color-white: #ffffff;
+/* Paleta principal */    
+--color-primary-dark: #03121F;
+--color-secundary: #01121F;
+--color-accent: #22c55e;
+--color-dark: black;
 
+/* Neutros*/   
+--color-text: #ebfcff;
+--color-white: #F3F4F4;
+
+/* Tipografia */
 --font-primary: 'Inter', sans-serif;
 
+/* Espaçamentos */
 --spacing-sm: 0.5rem;
 --spacing-md: 1rem;
 --spacing-lg: 2rem;
 --spacing-x1: 4rem;
 
+/* Bordas */
 --radius-sm: 0.25rem;
 --radius-md: 0.5rem;
 }
