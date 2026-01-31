@@ -1,7 +1,7 @@
 body {
     font-family: var(--font-primary);
-    color: var(--color-gray-900);
-    background-color: var(--color-white);
+    color: var(--color-text);
+    background-color: var(--color-primary-dark);
     line-height: 1.6;
 }
 
@@ -12,9 +12,9 @@ body {
 }
 
 .header {
-    background-color: var(--color-white);
+    background-color: var(--color-dark);
     padding: var(--spacing-md) var(--spacing-lg);
-    border-bottom: 1px solid var(--color-gray-100);
+    border-bottom: 1px solid var(--color-dark);
 }
 
 .header__nav {
@@ -29,7 +29,7 @@ body {
 .header__logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--color-primary);
+    color: var(--color-white);
 }
 
 .header__menu {
@@ -39,39 +39,56 @@ body {
 
 .header__menu a {
     font-weight: 500;
-    color: var(--color-gray-600);
+    color: var(--color-white);
+    transition: 0.3s;
+    
 }
 
 .header__menu a:hover {
-    color: var(--color-primary);
+    text-decoration: underline;
+    
 }
 
 .hero {
     padding: var(--spacing-x1) var(--spacing-lg);
     text-align: center;
-    background-color: var(--color-gray-100);
+    background: linear-gradient(
+        180deg,
+        var(--color-dark),
+        var(--color-secundary)
+    );
 }
 
 .hero__title {
     font-size: 2.5rem;
     max-width: 700px;
     margin: 0 auto var(--spacing-md);
+    color: var(--color-text);
 }
 
 .hero__subtitle {
     font-size: 1.25rem;
-    color: var(--color-gray-600);
+    color: var(--color-text);
     max-width: 600px;
     margin: 0 auto var(--spacing-lg);
 }
 
+.button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    background-color: var(--color-dark);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
 .button--primary {
-    background-color: var(--color-primary);
-    color: var(--color-white);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .button--primary:hover {
-    background-color: var(--color-primary-dark);
+    transform: translateY(-5px);
 }
 
 .benefits {
@@ -88,33 +105,38 @@ body {
 }
 
 .benefit-card {
-    background-color: var(--color-white);
+    background: linear-gradient(
+    180deg,
+    var(--color-dark),
+    var(--color-secundary)
+    );
     padding: var(--spacing-lg);
     border-radius: var(--spacing-md);
     text-align: center;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 .benefit-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1)
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2)
 }
 
 .benefit-card h3 {
     margin-bottom: var(--spacing-sm);
-    color: var(--color-gray-600);
+    color: var(--color-text);
 }
 
 .benefit-card p {
-    color: var(--color-gray-600);
+    color: var(--color-text);
 }
 
 /* Depoimentos */
 
 .testimonials {
     padding: var(--spacing-x1) var(--spacing-lg);
-    background-color: var(--color-gray-100);
+    background-color: var(--color-secundary);
 }
 
 .testimonials__list {
@@ -127,20 +149,31 @@ body {
 }
 
 .testimonial-card {
-    background-color: var(--color-white);
+    background-color: var(--color-dark);
     padding: var(--spacing-lg);
     border-radius: var(--radius-md);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.testimonial-card__avatar {
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    border: 3px solid var(--color-white);
 }
 
 .testimonial-card p {
     margin-bottom: var(--spacing-sm);
-    color: var(--color-gray-600);
+    color: var(--color-text);
 }
 
 .testimonial-card span {
     font-weight: 600;
-    color: var(--color-gray-900);
+    color: var(--color-text);
 }
 
 /* Planos */
@@ -151,7 +184,7 @@ body {
 
 .pricing__list {
     max-width: 1000px;
-    margin: o auto;
+    margin: 0 auto;
 
     display: grid;
     grid-template-columns: 1fr;
@@ -159,11 +192,15 @@ body {
 }
 
 .pricing-card {
-    background-color: var(--color-white);
+    background-color: var(--color-dark);
     padding: var(--spacing-lg);
     border-radius: var(--radius-md);
     text-align: center;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
 }
 
 .pricing-card h3 {
@@ -174,32 +211,48 @@ body {
     font-size: 1.75rem;
     font-weight: 700;
     margin-bottom: var(--spacing-md);
-    color: var(--color-primary);
+    color: var(--color-text);
 }
 
 .pricing-card ul {
     margin-bottom: var(--spacing-md);
+    color: var(--color-primary);
 }
 
 .pricing-card li {
     margin-bottom: var(--spacing-sm);
 }
 
-.pricing-card--featured {
-    border: 2px solid var(--color-primary);
+.button__plan {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    background-color: var(--color-primary-dark);
 }
 
 /* Fechamento */
 
 .cta {
     padding: var(--spacing-x1) var(--spacing-lg);
-    background-color: var(--color-primary);
+    background: linear-gradient(
+    180deg,
+    var(--color-dark),
+    var(--color-secundary)
+    );
     text-align: center;
-    color: var(--color-white);
+    color: var(--color-text);
 }
 
 .cta h2 {
     margin-bottom: var(--spacing-md);
+    color: var(--color-text);
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
 }
 
 
