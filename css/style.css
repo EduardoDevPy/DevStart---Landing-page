@@ -188,7 +188,7 @@ body {
 /* Planos */
 
 .pricing {
-    padding: var(--spacing-x1) var(--spacing-lg);
+    padding: var(--spacing-lg) var(--spacing-lg);
 }
 
 .pricing__list {
@@ -238,6 +238,46 @@ body {
     border-radius: var(--radius-md);
     font-weight: 600;
     background-color: var(--color-primary-dark);
+}
+
+.payment-info {
+    background: linear-gradient(
+        360deg,
+        var(--color-dark),
+        var(--color-secundary)
+    );
+    padding: var(--spacing-md), var(--spacing-md);
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+
+    color: var(--color-text);
+    text-align: center;
+}
+
+.payment-info__item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.payment-info__item img {
+    width: var(--spacing-md);
+    height: var(--spacing-md);
+}
+
+.payment-info__sub {
+    width: 100%;
+    margin-top: 0.2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
 }
 
 /* Fechamento */
